@@ -42,7 +42,7 @@ namespace PokemonList
 		public async void GetPokemon()
 		{
 
-			var pokemonResponse = await client.GetAsync($"https://pokeapi.co/api/v2/pokemon/?offset=0&limit=1000");
+			var pokemonResponse = await client.GetAsync($"https://pokeapi.co/api/v2/pokemon/?offset=0&limit=20");
 			pokemonResponse.EnsureSuccessStatusCode();
 			var responseBody = await pokemonResponse.Content.ReadAsStringAsync();
 			var pokemons = JsonSerializer.Deserialize<Pokemons>(responseBody);

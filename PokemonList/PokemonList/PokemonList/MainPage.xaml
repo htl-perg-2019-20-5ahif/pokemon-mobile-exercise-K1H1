@@ -8,10 +8,10 @@
     <ContentPage.Content>
 
         <StackLayout>
-            <ListView ItemsSource="{Binding Path=PokemonList}"  ItemAppearing="ListView_ItemAppearing" ItemTapped="ListView_ItemTapped" >
+            <ListView ItemsSource="{Binding Path=PokemonList}"  ItemTapped="ListView_ItemTapped" >
                 <ListView.ItemTemplate>
                     <DataTemplate>
-                        <ImageCell Text="{Binding Name}" ImageSource="{Binding FrontUrl}" />
+                        <ImageCell Text="{Binding Path=Name}" ImageSource="{Binding Path=FrontUrl}" />
                     </DataTemplate>
                 </ListView.ItemTemplate>
             </ListView>
